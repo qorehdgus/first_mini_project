@@ -1,0 +1,42 @@
+@charset "UTF-8";
+#member{
+		text-align:center;
+		margin-top:200px;
+	}
+	#member>form>div{
+		background-color:black;
+		color:white;
+		width:350px;
+		height:30px;
+		margin:0 auto;
+		margin-top:20px;
+		border-radius:40px;
+		text-align:left;
+		padding-left:30px;
+	}
+	#member input{
+		height:100%;
+		border:none;
+		background-color:inherit;
+		box-sizing:border-box;
+		width:200px;
+		color:white;
+	}
+	#member span{
+		display:block;
+		float:left;
+		width:100px;
+		line-height:30px;
+		height:30px;
+	}
+	.title{
+		font-size:30px;
+		font-weight:bold;
+	}
+	button{
+		margin-top:30px;
+		width:100px;
+		background-color:inherit;
+		font-size:20px;
+		border-radius:40px;
+	}

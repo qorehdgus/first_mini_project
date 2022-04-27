@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.campus.miniProject.DAO.loginDAO">
+  	<insert id="memberInsert">
+  		insert into membertable(userid,userpwd,username,tel,email) 
+  		values(#{userid},#{userpwd},#{username},#{tel},#{email})
+  	</insert>
+  	<select id="memberCheck" resultType="String">
+  		select userid from membertable where userid=#{userid}
+  	</select>
+  	<select id="loginCheck" resultType="int">
+  		select count(userid) from membertable where userid=#{userid} and userpwd=#{userpwd}
+  	</select>
+  </mapper>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.campus.miniProject.DAO.boardDAO">
+  	<select id='boardPlanList' resultType='com.campus.miniProject.VO.myPageVO'>
+  		select datano,userid,title,color,content,Sdate,Edate from myplantable 
+  		where userid=#{userid} and year=#{year} and month=#{month}
+  	</select>
+  	<delete id='boardPlanListDelete'>
+  		delete from myplantable
+  			where datano in
+  			<foreach item='datano' index="index" collection="arg0"
+  				open="(" separator="," close=")">
+  					${datano}
+  				</foreach>
+  	</delete>
+  	<update id='boardPlanListUpdate'>
+  		update myplantable set title=#{title}, color=#{color}, Sdate=#{Sdate}, Edate=#{Edate}, content=#{content}
+  		where datano=#{datano}
+  	</update>
+  	<insert id="boardHumorListInsert">
+  		insert into humortable (userid,title,content,ip) value(#{userid},#{title},#{content},#{ip})
+  	</insert>
+  	<select id="boardHumorCount" resultType="int">
+  		select count(no) as count from humortable
+  	</select>
+  	<select id="boardHumorList" resultType="com.campus.miniProject.VO.boardVO">
+  		select no,userid,title,hit,date_format(writedate,'%m%d %H:%i') as writedate
+  		from humortable
+  		order by no desc limit ${onePageRecord} offset ${offsetIndex}
+  	</select>
+  	<update id="boardHitUp">
+  		update humortable set hit=hit+1 where no=${param1}
+  	</update>
+  	<select id="boardHumorShow" resultType="com.campus.miniProject.VO.boardVO">
+  		select no,userid,title,content from humortable where no=${param1}
+  	</select>
+  	<insert id="dagulInsert">
+  		insert into dagultable(no,userid,content) values(#{no},#{userid},#{content})
+  	</insert>
+  	<select id="dagulList" resultType="com.campus.miniProject.VO.dagulVO">
+  		select no,userid,content from dagultable where no=${param1}
+  	</select>
+  </mapper>

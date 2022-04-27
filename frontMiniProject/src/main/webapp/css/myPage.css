@@ -1,0 +1,170 @@
+@charset "UTF-8";
+section>div{
+		width:1200px;
+		margin:0 auto;
+	}
+	section>div>*{
+		float:left;
+	}
+	#myPageMenu{
+		width:20%;
+		margin:0 auto;
+	}
+	#myPageMain{
+		width:80%;
+		height:900px;
+		margin-top:100px;
+	}
+	#myPageMenu img{
+		width:25px;
+	}
+	#myPageMenu ul{
+		margin-top:50px;
+	}
+	#myPageMenu li{
+		height:100px;
+		text-align:center;
+		line-height:100px;
+		font-size:20px;
+		font-weight:bold;
+	}
+	.day{
+		float:left;
+		width:136.5px;
+		height:40px;
+		border-top:1px solid #ddd;
+		border-bottom:1px solid #ddd;
+		line-height:40px;
+		box-sizing:border-box;
+		text-align:right;
+		position:relative;
+		z-index:0;
+	}
+	.day_li{
+		float:left;
+		width:136.5px;
+		text-align:right;
+		height:100px;
+		border-bottom:1px solid #ddd;
+		position:relative;
+	}
+	.day_li>span{
+		overflow:hidden;
+		display:block;
+		width:100%;
+		height:100%;
+	}
+	.inputli{
+		position:absolute;
+		top:100px;
+		background-color:white;
+		width:400px;
+		height:120px;
+		text-align:left;
+		padding:20px;
+		margin-left:-50px;
+		font-weight:bold;
+		color:black;
+		box-shadow:0px 0px 3px 0px;
+		z-index:1;
+	}
+	.inputli input{
+		height:25px;
+		background-size:20px;
+		background-repeat:no-repeat;
+		padding-left:30px;
+		background-position:5px 50%;
+	}
+	.inputli input[type=text]{
+		width:362px;
+		background-image:url(../img/calender.png);
+	}
+	.inputli input[type=date]{
+		margin-top:20px;
+		width:155px;
+		background-image:url(../img/calender.png);
+	}
+	.txtRed{
+		color:red;
+	}
+	.direction{
+		width:20px;
+		cursor:pointer;
+	}
+	#dateTitle{
+		text-align:center;
+		width:200px;
+		margin:0 auto;
+		line-height:30px;
+	}
+	.inputForm{
+		text-align:center;
+		border:1px solid gray;
+		border-radius:30px;
+		width:310px;
+		height:40px;
+	}
+	.inputForm input{
+		height:100%;
+		width:130px;
+		border:none;
+		background-color:inherit;
+		box-sizing:border-box;
+	}
+	.inputForm input[type=text]{
+		width:250px;
+	}
+	button{
+		display:block;
+		background-color:inherit;
+		margin:0 auto;
+		margin-top:20px;
+		border-radius:10px;
+		width:50px;
+	}
+	.dropM{
+		width:90%;
+		height:23px;
+		line-height:23px;
+		text-align:left;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow: ellipsis;
+		margin-bottom:5px;
+		background-color:black;
+		color:white;
+		border-radius:5px;
+		margin-left:5px;
+	}
+	.countM{
+		float:left;
+		display:block;
+		text-align:left;
+		width:50px;
+		padding-left:10px;
+		cursor:pointer;
+		color:rgb(166,174,187);
+		position:relative;
+	}
+	.subDropM{
+		background-color:white;
+		position:absolute;
+		padding:20px;
+		z-index:1;
+		left:145px;
+		text-align:left;
+		color:black;
+		box-shadow:0px 0px 3px 0px;
+	}
+	.alamP{
+		width:0px;
+		white-space:nowrap;
+		overflow:hidden;
+		font-size:16px;
+		line-height:16px;
+		border:1px solid #dddd;
+		padding:13px;
+	}
+	#Alam{
+		cursor:pointer;
+	}
